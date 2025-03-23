@@ -1,0 +1,342 @@
+/* body */
+body {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+  }
+  
+  
+  
+  /* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Main Container */
+.main-container {
+  width: 100%;
+  background-color: #333;
+  padding: 10px 0;
+}
+
+/* Top Navigation Bar */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+}
+
+.nav li {
+  position: relative;
+  margin-right: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: #555;
+}
+
+/* Dropdown Styling */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  min-width: 160px;
+  padding: 10px;
+  border-radius: 5px;
+  list-style-type: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 8px;
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+.dropdown-menu a:hover {
+  background-color: #ddd;
+}
+/* Mobile Menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .nav {
+      display: none;
+      flex-direction: column;
+      background: #333;
+      width: 100%;
+      position: absolute;
+      top: 50px;
+      left: 0;
+  }
+
+  .nav li {
+      margin: 0;
+      text-align: center;
+  }
+
+  .nav-link {
+      display: block;
+      padding: 15px;
+  }
+
+  .menu-toggle {
+      display: flex;
+  }
+
+  .menu-toggle.active + .nav {
+      display: flex;
+  }
+}
+
+  /* grid-container */
+  .project-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 20px;
+    column-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(299px, 1fr));
+    padding: 10px;
+  
+    /* background-color: #555; */
+  }
+  
+  .project-section div {
+    background-color: whitesmoke;
+    padding: 20px;
+    font-size: 25px;
+    text-align: center;
+    aspect-ratio: 1;
+    background-image: url(https://pngtree.com/freebackground/smoke-powder-atmosphere-color-gradient_926839.html);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 40px;
+  }
+  
+  
+  .project-section div:hover {
+    border: solid 2px green;
+  }
+  
+  /* Image styles */
+  img {
+    height: 200px;
+    width: 200px;
+    border: 2px black solid;
+    box-shadow: 10px 5px 10px black;
+    border-radius: 30px;
+    filter: grayscale(20%);
+  }
+  
+  img:hover {
+    transform: scale(1.05);
+    transition: all .2s ease-in-out;
+    filter: grayscale(0%);
+  }
+  
+  /* Button styles */
+  button {
+    color: whitesmoke;
+    font-size: 15px;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: oldlace;
+  }
+  
+  /* Project section styles */
+  .project-section {
+    margin: 20px;
+  }
+  
+  .project {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .project img {
+    display: block;
+    margin: 0 auto 10px;
+  }
+  
+  .project button {
+    background-color: #333;
+    color: whitesmoke;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .project button:hover {
+    background-color: #555;
+  }
+  
+  /* Media Queries */
+  /* For tablets and smaller screens */
+  @media (max-width: 768px) {
+    .welcome-message {
+        font-size: 30px;
+        margin-top: 30px;
+    }
+  
+    .welcome-message h1 {
+        font-size: 36px;
+    }
+  
+    .welcome-message p {
+        font-size: 16px;
+    }
+  
+    .navbar {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+  
+    .navbar ul {
+        flex-direction: row;
+        align-items: center;
+    }
+  
+    .navbar a {
+        font-size: 20px;
+    }
+  
+  }
+  
+  /* For mobile screens */
+  @media (max-width: 480px) {
+    .welcome-message {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+  
+    .welcome-message h1 {
+        font-size: 28px;
+    }
+  
+    .welcome-message p {
+        font-size: 14px;
+    }
+  
+    .navbar ul {
+        flex-direction: row-reverse;
+    justify-content: center;
+    }
+  
+    .navbar a {
+        font-size: 18px;
+    }
+  
+  
+  
+    .project-section {
+        grid-template-columns: 1fr;
+        padding: 5px;
+    }
+  
+    .project-section div {
+        padding: 10px;
+        font-size: 18px;
+    }
+  
+    img {
+        height: 150px;
+        width: 150px;
+    }
+  }
+  
+  /* For mobile screens with max width 380px */
+  @media (max-width: 380px) {
+    .welcome-message {
+        font-size: 18px;
+        margin-top: 15px;
+    }
+  
+    .welcome-message h1 {
+        font-size: 24px;
+    }
+  
+    .welcome-message p {
+        font-size: 12px;
+    }
+  
+    .navbar ul {
+        flex-direction: row;
+        justify-content: flex-end; 
+       
+    }
+  
+    .navbar a {
+        font-size: 16px;
+    }
+  
+   
+    .project-section {
+        grid-template-columns: 1fr;
+        padding: 5px;
+    }
+  
+    .project-section div {
+        padding: 8px;
+        font-size: 16px;
+    }
+  
+    img {
+        height: 120px;
+        width: 120px;
+    }
+  }
+  
