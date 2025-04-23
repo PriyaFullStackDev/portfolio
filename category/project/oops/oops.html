@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercedes-Benz Cars</title>
+    <style>
+        body { font-family: sans-serif; }
+        table { border-collapse: collapse; width: 80%; margin: 20px auto; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+
+    <h1>Mercedes-Benz Car Inventory</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Model</th>
+                <th>Year</th>
+                <th>Color</th>
+                <th>Engine</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>C-Class</td>
+                <td>2023</td>
+                <td>Silver</td>
+                <td>2.0L Turbo</td>
+            </tr>
+            <tr>
+                <td>E-Class</td>
+                <td>2024</td>
+                <td>Black</td>
+                <td>3.0L V6</td>
+            </tr>
+            <tr>
+                <td>S-Class</td>
+                <td>2023</td>
+                <td>White</td>
+                <td>4.0L V8 Biturbo</td>
+            </tr>
+            <tr>
+                <td>GLC</td>
+                <td>2024</td>
+                <td>Blue</td>
+                <td>2.0L Turbo</td>
+            </tr>
+            <tr>
+                <td>GLE</td>
+                <td>2023</td>
+                <td>Gray</td>
+                <td>3.0L Inline-6 Turbo</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>This table represents a basic inventory of Mercedes-Benz cars.</p>
+
+    <h2>Conceptual SQL Diagram</h2>
+    <p>Below is a simplified representation of how you might structure this data in a SQL database, thinking in terms of classes and objects:</p>
+
+    <pre>
+    +-------------+     +--------------+     +-------------+
+    | Car         | --> | ModelDetails | --> | EngineSpecs |
+    +-------------+     +--------------+     +-------------+
+    | car_id (PK) |     | model_id (PK)|     | engine_id(PK)|
+    | model_id (FK)|     | model_name   |     | type        |
+    | year        |     | body_style   |     | displacement|
+    | color       |     | ...          |     | horsepower  |
+    | engine_id(FK)|     +--------------+     | ...         |
+    | ...         |                          +-------------+
+    +-------------+
+    </pre>
+
+    <p><strong>Explanation:</strong></p>
+    <ul>
+        <li><strong>Car:</strong> This table represents individual car objects (instances). Each row is a specific car with its unique ID, model, year, color, and engine.</li>
+        <li><strong>ModelDetails:</strong> This table acts like a "class" defining the characteristics of different car models (e.g., C-Class, E-Class). Multiple "Car" objects can refer to the same "ModelDetails".</li>
+        <li><strong>EngineSpecs:</strong> Similarly, this table defines the specifications of different engine types. Multiple "Car" objects can have the same engine type.</li>
+        <li><strong>Primary Key (PK):</strong> Indicates a unique identifier for each record in a table.</li>
+        <li><strong>Foreign Key (FK):</strong> Links records in one table to records in another table, establishing relationships (like a car belonging to a specific model and having a specific engine).</li>
+    </ul>
+
+</body>
+</html>
