@@ -1,324 +1,554 @@
-<!DOCTYPE html> `
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src *; script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com;">
-<title>Creative Portfolio</title>
+  <title>Jumbo Kids Playschool - Where Learning Begins with Fun</title>
+  
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-  <!-- Animate.css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Animate CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="./category/project/css-page/index.css">
+  <link rel="stylesheet" href="./index.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </head>
-<body style="background: linear-gradient(135deg, #000 0%, #1c1c1c 100%);">
-
-  <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top py-3">
     <div class="container">
-      <a class="navbar-brand" href="#">My Portfolio</a>
+      <a class="navbar-brand title-font fs-3 text-primary" href="#">
+        <img src="./assets/podarlogo.png" alt="Jumbo Kids Logo" height="90">
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#programs">Programs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#facilities">Facilities</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#gallery">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonials">Testimonials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
         </ul>
+        <a href="#contact" class="btn btn-primary ms-lg-3 px-4">Enquire Now</a>
       </div>
     </div>
   </nav>
 
-  <!-- Home Section -->
-  <section id="home" class="home-section d-flex align-items-center">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center text-white">
+          <h1 class="display-3 fw-bold title-font mb-4 animate__animated animate__fadeInDown">Welcome to Podar Jumbo Kids Playschool</h1>
+          <p class="lead fs-4 mb-5 animate__animated animate__fadeInUp">Where little minds grow with love, care, and creativity</p>
+          <div class="d-flex gap-3 justify-content-center animate__animated animate__fadeInUp">
+            <a href="#programs" class="btn btn-primary btn-lg px-4 py-3">Our Programs</a>
+            <a href="#contact" class="btn btn-outline-light btn-lg px-4 py-3">Schedule Visit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+            <!-- About Section -->
+<section id="about" class="py-5 py-lg-7 bg-light">
     <div class="container">
       <div class="row align-items-center">
-        <!-- Left Column: Text Content -->
-        <div class="col-md-6 animate__animated animate__fadeInLeft">
-          <span class="subheading">Hello!</span>
-          <h1 class="mb-4 mt-3" id="changing-text">I'm a <span id="dynamic-text" class="highlight">Full-Stack Developer</span></h1>
-          <p id="changing-subtext">Creating Amazing Experiences</p>
-          <p>
-            <!-- GitHub Button -->
-            <a href="https://github.com/" target="_blank" class="btn btn-primary py-3 px-4">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-            <!-- LinkedIn Button -->
-            <a href="https://www.linkedin.com/feed/" target="_blank" class="btn btn-primary py-3 px-4">
-              <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <!-- Resume Button -->
-            <a href="./category/assets/images/priyaresume.enjoy.pdf" class="btn btn-primary py-3 px-4">
-              <i class="fas fa-file-pdf"></i> Resume
-            </a>
-          </p>
+  
+        <!-- Left Side: Video Preview -->
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <div class="position-relative">
+             <img src="./assets/podarweb.jpeg" alt="About Jumbo Kids" class="img-fluid rounded-4 shadow" height="400">
+            <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content bg-transparent border-0">
+                  <div class="modal-body p-0">
+                    <div class="ratio ratio-16x9">
+                      <video controls>
+                        <source src="./assets/sportsday.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="play-btn position-absolute top-50 start-50 translate-middle" data-bs-toggle="modal" data-bs-target="#videoModal" style="cursor: pointer;">
+              <i class="fas fa-play fa-3x text-primary"></i>
+            </div>
+          </div>
         </div>
-        <!-- Right Column: Image -->
-        <div class="col-md-6 animate__animated animate__fadeInRight text-center">
-          <img src="./category/assets/images/priyamahajan Background Removed.png" alt="Profile Picture" class="img-fluid rounded-circle shadow-lg" style="width: 30%; height: 10%; object-fit: cover;">
+  
+        <!-- Right Side: About Text -->
+        <div class="col-lg-6">
+          <h6 class="text-primary fw-bold mb-3">ABOUT US</h6>
+          <h2 class="display-5 fw-bold mb-4">Nurturing Young Minds Since 2010</h2>
+          <p class="mb-4">Jumbo Kids Playschool is a premier early childhood education center dedicated to providing a safe, nurturing, and stimulating environment where children can learn, grow, and thrive.</p>
+          <p class="mb-5">Our play-based curriculum is designed to foster creativity, curiosity, and confidence in young learners, preparing them for a lifetime of success.</p>
         </div>
+  
       </div>
     </div>
   </section>
+  
+  <!-- Video Modal -->
+ 
+  
 
-  <!-- Banner Section -->
-  <section class="section__container banner__container">
-    <div class="banner__card">
-      <span><i class="fas fa-code"></i></span>
-      <div>
-        <h4>Web Development</h4>
-        <p>
-          I am a passionate web developer dedicated to building dynamic, responsive, and user-friendly websites that
-          deliver exceptional digital experiences.
-        </p>
-      </div>
-    </div>
-    <div class="banner__card">
-      <span><i class="fas fa-mobile-alt"></i></span> <!-- Mobile Development Icon -->
-      <div>
-        <h4>Mobile Development</h4>
-        <p>
-          I specialize in designing, optimizing, and managing databases to ensure efficient, secure, and reliable data
-          handling.
-        </p>
-      </div>
-    </div>
-    <div class="banner__card">
-      <span><i class="fas fa-bug"></i></span> <!-- Manual Testing Icon -->
-      <div>
-        <h4>Manual Testing</h4>
-        <p>
-          I ensure software reliability through thorough manual testing, identifying bugs, and enhancing the user
-          experience.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="skills-section py-5">
+  <!-- Programs Section -->
+  <section id="programs" class="py-5 py-lg-7">
     <div class="container">
-      <h2 class="text-center mb-4" style="color: white;">My Skills</h2>
-      <div class="row">
-        <!-- HTML Skill -->
-        <div class="col-md-6 mb-4">
-          <div class="skill-item">
-            <span class="skill-name"style="color: aliceblue;">HTML</span>
-            <div class="progress">
-              <div class="progress-bar bg-primary" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-                <span class="progress-text">95%</span>
-              </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center mb-5">
+          <h6 class="text-primary fw-bold mb-3">OUR PROGRAMS</h6>
+          <h2 class="display-5 fw-bold mb-3">Age-Appropriate Learning Programs</h2>
+          <p class="lead">We offer a variety of programs designed to meet the developmental needs of children at different ages and stages.</p>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="program-card">
+            <img src="./assets/podar.png.jpeg" alt="Playgroup Program">
+            <div class="program-overlay">
+              <span class="age-group-badge">1.5 - 2.5 Years</span>
+              <h4 class="mt-2 mb-3">Playgroup</h4>
+              <p class="mb-0">Introduction to school environment through play and fun activities.</p>
             </div>
           </div>
         </div>
-        <!-- CSS Skill -->
-        <div class="col-md-6 mb-4">
-          <div class="skill-item">
-            <span class="skill-name" style="color: aliceblue;">CSS</span>
-            <div class="progress">
-              <div class="progress-bar bg-success" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                <span class="progress-text">90%</span>
-              </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="program-card">
+            <img src="./assets/nursury.jpeg" alt="Nursery Program">
+            <div class="program-overlay">
+              <span class="age-group-badge">2.5 - 3.5 Years</span>
+              <h4 class="mt-2 mb-3">Nursery</h4>
+              <p class="mb-0">Developing social skills and early learning concepts through interactive play.</p>
             </div>
           </div>
         </div>
-        <!-- JavaScript Skill -->
-        <div class="col-md-6 mb-4">
-          <div class="skill-item">
-            <span class="skill-name" style="color: aliceblue;">JavaScript</span>
-            <div class="progress">
-              <div class="progress-bar bg-warning" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                <span class="progress-text">55%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Manual Testing Skill -->
-        <div class="col-md-6 mb-4">
-          <div class="skill-item">
-            <span class="skill-name" style="color: aliceblue;">Manual Testing</span>
-            <div class="progress">
-              <div class="progress-bar bg-info" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                <span class="progress-text">90%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- React Skill -->
-        <div class="col-md-6 mb-4">
-          <div class="skill-item">
-            <span class="skill-name" style="color: aliceblue;" >React</span>
-            <div class="progress">
-              <div class="progress-bar bg-danger" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                <span class="progress-text">55%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Bootstrap Skill -->
-        <div class="col-md-6 mb-4">
-          <div class="skill-item">
-            <span class="skill-name" style="color: aliceblue;">Bootstrap</span>
-            <div class="progress">
-              <div class="progress-bar bg-secondary" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-                <span class="progress-text">70%</span>
-              </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="program-card">
+            <img src="./assets/kindargartan.jpeg" alt="Kindergarten Program">
+            <div class="program-overlay">
+              <span class="age-group-badge">3.5 - 5.5 Years</span>
+              <h4 class="mt-2 mb-3">Kindergarten</h4>
+              <p class="mb-0">Preparing for formal schooling with structured learning and activities.</p>
             </div>
           </div>
         </div>
       </div>
+      <div class="text-center mt-5">
+        <a href="#contact" class="btn btn-primary px-4 py-3">Enquire About Programs</a>
+      </div>
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="py-5">
+  <!-- Why Choose Us Section -->
+  <section class="py-5 py-lg-7 bg-light">
     <div class="container">
-      <h2 class="text-center mb-4">Projects</h2>
-      <div class="row">
-        <!-- Project Card 1 -->
-        <div class="col-md-4 mb-4">
-          <div class="card h-100">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeMAVgg82JiZ12XiM7RQHeRmENuwQd-gSF_Q&s" class="card-img-top project-image" alt="Project 1">
-            <div class="card-body">
-              <h5 class="card-title">Project 1</h5>
-              <p class="card-text" style="color: #000;">This project demonstrates skills in HTML, CSS, and JavaScript.</p>
-              <a href="./category/project/html-projects/html-css.html" class="btn btn-primary">HTML/CSS</a>
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center mb-5">
+          <h6 class="text-primary fw-bold mb-3">WHY CHOOSE US</h6>
+          <h2 class="display-5 fw-bold mb-3">What Makes Jumbo Kids Special</h2>
+          <p class="lead">We provide an environment that nurtures each child's unique abilities and fosters a love for learning.</p>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="why-choose-item">
+            <div class="why-choose-icon">
+              <i class="fas fa-heart"></i>
             </div>
+            <h4>Child-Centered Approach</h4>
+            <p>Our curriculum is designed around each child's individual needs, interests, and developmental stage.</p>
           </div>
         </div>
-        <!-- Project Card 2 -->
-        <div class="col-md-4 mb-4">
-          <div class="card h-100">
-            <img src="https://studyopedia.com/wp-content/uploads/2020/07/JavaScript-Free-Tutorial.png" class="card-img-top project-image" alt="Project 2">
-            <div class="card-body">
-              <h5 class="card-title">JavaScript</h5>
-              <p class="card-text" style="color: #000;">This project focuses on React.js and Bootstrap.</p>
-              <a href="./category/project/js-projects/jsproject.html" class="btn btn-primary">JAVASCRIPT</a>
+        <div class="col-lg-4 col-md-6">
+          <div class="why-choose-item">
+            <div class="why-choose-icon">
+              <i class="fas fa-graduation-cap"></i>
             </div>
+            <h4>Qualified Educators</h4>
+            <p>Our teachers are trained in early childhood education and passionate about nurturing young minds.</p>
           </div>
         </div>
-        <!-- Project Card 3 -->
-        <div class="col-md-4 mb-4">
-          <div class="card h-100">
-            <img src="https://blog.testlodge.com/wp-content/uploads/2020/03/manual-esting-rocess-steps.png" class="card-img-top project-image" alt="Project 3">
-            <div class="card-body">
-              <h5 class="card-title">Project 3</h5>
-              <p class="card-text" style="color: #000;">This project demonstrates UI/UX design principles.</p>
-              <a href="./category/project/testing/manualtesting.html" class="btn btn-primary">MANUAL TESTING</a>
+        <div class="col-lg-4 col-md-6">
+          <div class="why-choose-item">
+            <div class="why-choose-icon">
+              <i class="fas fa-shield-alt"></i>
             </div>
+            <h4>Safe Environment</h4>
+            <p>Our facility is designed with child safety in mind, with secure premises and hygiene protocols.</p>
           </div>
         </div>
-        <!-- Project Card 4 -->
-        <div class="col-md-4 mb-4">
-          <div class="card h-100">
-            <img src="https://fossa.com/blog/content/images/size/w800h400/2022/02/react.png" class="card-img-top project-image" alt="Project 4">
-            <div class="card-body">
-              <h5 class="card-title">Project 4</h5>
-              <p class="card-text" style="color: #000;">This project focuses on database management and optimization.</p>
-              <a href="https://magnificent-custard-7ab941.netlify.app/" class="btn btn-primary">REACT JS</a>
+        <div class="col-lg-4 col-md-6">
+          <div class="why-choose-item">
+            <div class="why-choose-icon">
+              <i class="fas fa-paint-brush"></i>
             </div>
+            <h4>Creative Learning</h4>
+            <p>We emphasize creative expression through art, music, dance, and imaginative play.</p>
           </div>
         </div>
-        <!-- Project Card 5 -->
-        <div class="col-md-4 mb-4">
-          <div class="card h-100">
-            <img src="https://download.logo.wine/logo/Bootstrap_(front-end_framework)/Bootstrap_(front-end_framework)-Logo.wine.png" class="card-img-top project-image" alt="Project 5">
-            <div class="card-body">
-              <h5 class="card-title">Project 5</h5>
-              <p class="card-text" style="color: #000;">This project showcases API integration and backend development.</p>
-              <a href="#" class="btn btn-primary">BOOTSTRAP</a>
+        <div class="col-lg-4 col-md-6">
+          <div class="why-choose-item">
+            <div class="why-choose-icon">
+              <i class="fas fa-leaf"></i>
             </div>
+            <h4>Outdoor Activities</h4>
+            <p>Our outdoor play area and garden provide space for physical development and nature exploration.</p>
           </div>
         </div>
-
-        <!-- Project Card 5 -->
-        <div class="col-md-4 mb-4">
-          <div class="card h-100">
-            <img src="https://cdn1.vectorstock.com/i/1000x1000/53/35/assignment-vector-21635335.jpg" class="card-img-top project-image" alt="Project 5">
-            <div class="card-body">
-              <h5 class="card-title">Project 5</h5>
-              <p class="card-text" style="color: #000;"></p>
-              <a href="./category/project/newassignment/core.html" class="btn btn-primary">Assignment</a>
+        <div class="col-lg-4 col-md-6">
+          <div class="why-choose-item">
+            <div class="why-choose-icon">
+              <i class="fas fa-users"></i>
             </div>
-          </div>
-        </div>
-<!-- oops -->
-        <div class="col-md-4 mb-4">
-          <div class="card h-100">
-            <img src="https://download.logo.wine/logo/PostgreSQL/PostgreSQL-Logo.wine.png" class="card-img-top project-image" alt="Project 5">
-            <div class="card-body">
-              <h5 class="card-title">PostgreSQL</h5>
-              <p class="card-text" style="color: #000;"></p>
-              <a href="./category/project/assignment/pgsql.html" class="btn btn-primary">PostgreSQL</a>
-            </div>
-          </div>
-        </div>
-        <!-- scss -->
-        <div class="col-md-4 mb-4">
-          <div class="card h-100">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShqFe_dz96KwiHVINTYmII_SAnzHhZzhh6OQ&s" class="card-img-top project-image" alt="Project 5">
-            <div class="card-body">
-              <h5 class="card-title">Project 5</h5>
-              <p class="card-text" style="color: #000;"></p>
-              <a href="./category/project/scss/scss.html" class="btn btn-primary">scss</a>
-            </div>
+            <h4>Parent Partnership</h4>
+            <p>We maintain open communication with parents through regular updates and events.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
-<section id="about" class="py-5 bg-light" style="background-color: #000;">
-  <div class="container">
-    <h2 class="text-center mb-4">About Me</h2>
-    <div class="row align-items-center">
-      <div class="col-md-8 mx-auto text-center animate__animated animate__fadeInRight">
-        <p class="fs-5 lead">
-          Hello! I'm <strong>Priya Mahajan</strong>, a passionate and creative web developer with a strong focus on front-end technologies. I specialize in crafting visually stunning, responsive, and user-friendly websites using modern tools like <strong>HTML, CSS, JavaScript, and Bootstrap</strong>.
-        </p>
-        <p class="fs-5">
-          With a keen eye for design and a love for clean, efficient code, I strive to create digital experiences that are not only functional but also delightful to interact with. Whether it's building a website from scratch or optimizing an existing one, I'm always excited to take on new challenges and push the boundaries of what's possible on the web.
-        </p>
-        <p class="fs-5">
-          When I'm not coding, you can find me exploring the latest design trends, experimenting with new frameworks, or contributing to open-source projects. I believe in continuous learning and staying updated with the ever-evolving tech landscape.
-        </p>
-        <p class="fs-5">
-          Let's work together to bring your ideas to life! Feel free to <a href="#contact" class="text-decoration-none fw-bold">get in touch</a> if you'd like to collaborate or just chat about web development.
-        </p>
-        <a href="#projects" class="btn btn-primary btn-lg mt-3 animate__animated animate__pulse animate__infinite">View My Work</a>
+  <!-- Facilities Section -->
+  <section id="facilities" class="py-5 py-lg-7">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center mb-5">
+          <h6 class="text-primary fw-bold mb-3">OUR FACILITIES</h6>
+          <h2 class="display-5 fw-bold mb-3">Designed for Little Learners</h2>
+          <p class="lead">Our thoughtfully designed spaces support learning, play, and growth in a safe environment.</p>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="text-center p-4">
+            <div class="facility-icon mb-3">
+              <i class="fas fa-school"></i>
+            </div>
+            <h5>Bright Classrooms</h5>
+            <p>Spacious, well-lit classrooms with age-appropriate learning materials and play areas.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="text-center p-4">
+            <div class="facility-icon mb-3">
+              <i class="fas fa-child"></i>
+            </div>
+            <h5>Play Area</h5>
+            <p>Safe indoor and outdoor play spaces with equipment for physical development.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="text-center p-4">
+            <div class="facility-icon mb-3">
+              <i class="fas fa-book"></i>
+            </div>
+            <h5>Learning Resources</h5>
+            <p>Well-stocked library with picture books and educational toys for hands-on learning.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="text-center p-4">
+            <div class="facility-icon mb-3">
+              <i class="fas fa-utensils"></i>
+            </div>
+            <h5>Nutrition</h5>
+            <p>Healthy snacks and meals prepared with attention to nutrition and allergies.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="text-center p-4">
+            <div class="facility-icon mb-3">
+              <i class="fas fa-bus"></i>
+            </div>
+            <h5>Transportation</h5>
+            <p>Safe and reliable transportation with trained attendants and GPS tracking.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="text-center p-4">
+            <div class="facility-icon mb-3">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h5>Security</h5>
+            <p>Secure premises with CCTV surveillance and controlled access entry systems.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="text-center p-4">
+            <div class="facility-icon mb-3">
+              <i class="fas fa-music"></i>
+            </div>
+            <h5>Creative Spaces</h5>
+            <p>Dedicated areas for art, music, dance, and dramatic play activities.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="text-center p-4">
+            <div class="facility-icon mb-3">
+              <i class="fas fa-laptop"></i>
+            </div>
+            <h5>Technology</h5>
+            <p>Age-appropriate technology tools to support learning in a digital world.</p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-5 py-lg-7 bg-light">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center mb-5">
+          <h6 class="text-primary fw-bold mb-3">GALLERY</h6>
+          <h2 class="display-5 fw-bold mb-3">Moments at Jumbo Kids</h2>
+          <p class="lead">A glimpse into our vibrant learning environment and happy children.</p>
+        </div>
+      </div>
+      <div class="row g-3">
+        <div class="col-lg-4 col-md-6">
+          <div class="gallery-item">
+            <img src="./assets/color.jpeg" alt="Classroom Activities">
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="gallery-item">
+            <img src="./assets/outdoor.jpeg" alt="Outdoor Play">
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="gallery-item">
+            <img src="./assets/cutting.jpeg" alt="Art Activities">
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="gallery-item">
+            <img src="./assets/kindargartan.jpeg" alt="Music Class">
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="gallery-item">
+            <img src="./assets/podardance.jpeg" alt="Celebrations">
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="gallery-item">
+            <img src="./assets/fieldtrips.jpeg" alt="Field Trips">
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <a href="#" class="btn btn-primary px-4 py-3">View More Photos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-5 py-lg-7">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center mb-5">
+          <h6 class="text-primary fw-bold mb-3">TESTIMONIALS</h6>
+          <h2 class="display-5 fw-bold mb-3">What Parents Say About Us</h2>
+          <p class="lead">Hear from our happy parents about their experience with Jumbo Kids.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="swiper testimonialSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="testimonial-card">
+                  <div class="d-flex align-items-center mb-4">
+                    <img src="./assets/priyamahajan Background Removed.png" class="testimonial-img me-4" alt="Parent Testimonial">
+                    <div>
+                      <h5 class="mb-1">Priya Mahajan</h5>
+                      <p class="text-muted mb-0">Mother of Shivansh Mahajan(KG 1)</p>
+                    </div>
+                  </div>
+                  <p class="mb-0">"Jumbo Kids has been a wonderful experience for our son. The teachers are so caring and creative in their approach. Shivansh looks forward to school every day and has developed so much confidence since joining."</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimonial-card">
+                  <div class="d-flex align-items-center mb-4">
+                    <img src="assets/rupali.jpeg" class="testimonial-img me-4" alt="Parent Testimonial">
+                    <div>
+                      <h5 class="mb-1">Rupali Mahajan</h5>
+                      <p class="text-muted mb-0">Mother of Ruveet (Nursery)</p>
+                    </div>
+                  </div>
+                  <p class="mb-0">"The balance of learning and play at Jumbo Kids is perfect.Ruveet has developed strong foundational skills while having fun. The regular parent-teacher meetings keep us well-informed about her progress."</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimonial-card">
+                  <div class="d-flex align-items-center mb-4">
+                    <img src="./assets/kaushik.jpeg" class="testimonial-img me-4" alt="Parent Testimonial">
+                    <div>
+                      <h5 class="mb-1">Pallavi Ghagre</h5>
+                      <p class="text-muted mb-0">Mother of Kaushik (KG 1)</p>
+                    </div>
+                  </div>
+                  <p class="mb-0">"As a first-time mom, I was nervous about sending my child to playschool. The staff at Jumbo Kids made the transition so smooth.Kaushik has blossomed socially and is always excited to share what he learned each day."</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Admission Section -->
+<section class="py-5 py-lg-7 bg-primary text-white">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8 mb-4 mb-lg-0">
+          <h2 class="display-5 fw-bold mb-3">Admissions Open for 2025-26</h2>
+          <p class="lead mb-0">Limited seats available. Schedule a visit to our campus to learn more about our programs and meet our teachers.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a href="#contact" class="btn btn-light btn-lg px-4 py-3">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
   <!-- Contact Section -->
-  <section id="contact" class="py-5 bg-dark text-white">
-    <div class="container text-center">
-      <h2 class="mb-4">Contact Me</h2>
-      <p><strong>Email:</strong> <a href="mailto:priyamahajan2405@gmail.com" class="text-white">priyamahajan2405@gmail.com</a></p>
-      <p><strong>Phone:</strong> <a href="tel:+7767831819" class="text-white">+7767831819</a></p>
+  <section id="contact" class="py-5 py-lg-7">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center mb-5">
+          <h6 class="text-primary fw-bold mb-3">Contact Us</h6>
+          <h2 class="display-6 fw-bold mb-4">Get in Touch</h2>
+          <p class="lead text-muted">We are here to assist you. Fill out the form below or call us to know more about admissions, facilities, or curriculum.</p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <form>
+            <div class="mb-3">
+              <input type="text" class="form-control form-control-lg" placeholder="Your Name" required>
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control form-control-lg" placeholder="Your Email" required>
+            </div>
+            <div class="mb-3">
+              <input type="tel" class="form-control form-control-lg" placeholder="Your Phone" required>
+            </div>
+            <div class="mb-4">
+              <textarea class="form-control form-control-lg" rows="4" placeholder="Your Message" required></textarea>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   </section>
-
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3">
-    <p>&copy; 2024 Priya Mahajan. All Rights Reserved.</p>
+  <footer class="py-5">
+    <div class="container">
+      <div class="row">
+        
+        <!-- Footer About -->
+        <div class="col-md-4 mb-4">
+          <h5 class="mb-3 title-font">About Us</h5>
+          <p>We are dedicated to providing the best services to empower your journey. Passion, creativity, and excellence drive us forward every day.</p>
+        </div>
+        
+        <!-- Footer Links -->
+        <div class="col-md-4 mb-4">
+          <h5 class="mb-3 title-font">Quick Links</h5>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Programs</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        
+        <!-- Footer Contact & Social -->
+        <div class="col-md-4 mb-4">
+          <h5 class="mb-3 title-font">Contact</h5>
+          <p>Email: info@example.com</p>
+          <p>Phone: +123 456 7890</p>
+          <div class="d-flex mt-3">
+            <a href="#" class="social-icon me-2"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon me-2"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon me-2"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+  
+      </div>
+  
+      <div class="text-center mt-4">
+        <p class="mb-0">&copy; 2025. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Custom JS -->
-  <script src="script.js"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".testimonialSwiper", {
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    slidesPerView: 1,
+    spaceBetween: 30,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 3,
+      }
+    }
+  });
+</script>
 </body>
-</html>
+  
